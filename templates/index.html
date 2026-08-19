@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>PRECIOUS ❤️</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- Floating Hearts -->
+    <div class="hearts">
+        <span>❤️</span>
+        <span>💗</span>
+        <span>💕</span>
+        <span>💖</span>
+        <span>❤️</span>
+        <span>💞</span>
+        <span>💓</span>
+        <span>💗</span>
+        <span>💘</span>
+        <span>❤️</span>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <div class="card">
+
+            <div class="heart-icon">
+                ❤️
+            </div>
+
+            <p class="small-text">
+                A little something from my heart...
+            </p>
+
+            <h1>
+                PRECIOUS
+            </h1>
+
+            <div class="divider">
+                <span>♥</span>
+            </div>
+
+            <h2>
+                To the one who makes my heart smile
+            </h2>
+
+            <p class="intro">
+                Some people come into our lives and quietly make
+                everything more beautiful. You are one of those
+                rare people.
+            </p>
+
+            <p class="intro">
+                Every moment with you feels a little brighter,
+                every smile feels a little warmer, and every day
+                feels a little more special.
+            </p>
+
+            <!-- Reveal Button -->
+            <button
+                class="love-button"
+                onclick="revealMessage()"
+                id="loveButton"
+            >
+                <span>Open My Heart</span>
+                <span class="button-heart">♥</span>
+            </button>
+
+            <!-- Hidden Message -->
+            <div
+                class="hidden-message"
+                id="hiddenMessage"
+            >
+                <div class="message-heart">
+                    💖
+                </div>
+
+                <h3>
+                    My Love Letter
+                </h3>
+
+                <p>
+                    Dear PRECIOUS,
+                </p>
+
+                <p>
+                    If I could give you one thing in this world,
+                    I would give you the ability to see yourself
+                    through my eyes.
+                </p>
+
+                <p>
+                    Then you would understand just how special
+                    you truly are to me.
+                </p>
+
+                <p>
+                    You are more than a beautiful person.
+                    You are a beautiful feeling — the kind that
+                    makes ordinary moments unforgettable.
+                </p>
+
+                <p>
+                    I love the way you make me smile without even
+                    trying. I love the little moments, the laughs,
+                    the conversations, and even the silence we
+                    can comfortably share.
+                </p>
+
+                <p>
+                    Wherever life takes us, I hope you always
+                    remember that there is someone who thinks
+                    you're incredibly precious.
+                </p>
+
+                <p class="final-line">
+                    You have a special place in my heart. ❤️
+                </p>
+
+                <div class="signature">
+                    Forever yours,<br>
+                    <strong>With all my love ❤️</strong>
+                </div>
+            </div>
+
+            <div class="bottom-hearts">
+                <span>♥</span>
+                <span>♥</span>
+                <span>♥</span>
+            </div>
+
+        </div>
+
+        <footer>
+            Made with love ❤️
+        </footer>
+
+    </main>
+
+    <script>
+        function revealMessage() {
+            const message = document.getElementById("hiddenMessage");
+            const button = document.getElementById("loveButton");
+
+            if (message.classList.contains("show")) {
+                message.classList.remove("show");
+                button.innerHTML =
+                    '<span>Open My Heart</span><span class="button-heart">♥</span>';
+            } else {
+                message.classList.add("show");
+                button.innerHTML =
+                    '<span>Close My Heart</span><span class="button-heart">♥</span>';
+
+                setTimeout(() => {
+                    message.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center"
+                    });
+                }, 250);
+            }
+        }
+    </script>
+
+</body>
+</html>
